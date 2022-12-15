@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Cosmos.pages.Master" %>
+
+<!DOCTYPE html>
+
+<html dir="rtl">
+<head runat="server">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8">
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <div class="topnav" id="myTopnav">
+            <div>
+                <a href="index.aspx" style="width: 100%; padding-right:10px;">
+                    <img src="../assets/logo.svg" alt=""  class="logo"></a>
+            </div>
+            <div style="display: flex;">
+                <a href="my-profile.aspx" style="width:50px; margin-right:20px;" id="pfp" runat="server"></a>
+                <a href="index.aspx" style="cursor: initial;"><span style="cursor: pointer;">בית</span></a>
+                <a runat="server" id="about" href="about.aspx">אודות</a>
+                <a runat="server" id="users" href="users-table.aspx">משתמשים</a>
+                <a runat="server" id="uStats" href="stats.aspx">stats</a>
+                <a runat="server" id="courseEdit" href="add-to-course.aspx">הוספה לקורס</a>
+                <a runat="server" id="signup" href="register.aspx">הרשמה</a>
+                <a runat="server" id="login" href="login.aspx">כניסה</a>
+
+                 <asp:Button id="logout" Text="יציאה" CssClass="logout-button" OnClick="LogOut" runat="server"/>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="footer">
+            <div>
+                <h2>דפים</h2>
+                <a href="index.aspx" style="cursor: initial;"><span style="cursor: pointer;">בית</span></a>
+                <a href="about.aspx" id="fAbout" style="cursor: initial;"><span style="cursor: pointer;">אודות</span></a>
+                <a href="faq.aspx" id="fFaq" style="cursor: initial;"><span style="cursor: pointer;">שנ"נ</span></a>
+                <a href="chat.aspx" id="fChat" style="cursor: initial;"><span style="cursor: pointer;">צ'אט גלובלי</span></a>
+                <a href="add-to-course.aspx" id="fCourseEdit" runat="server" style="cursor: initial;"><span style="cursor: pointer;">הוספה לקורס</span></a>
+                <a href="users-table.aspx" id="fUsers" runat="server" style="cursor: initial;"><span style="cursor: pointer;">משתמשים</span></a>
+                <a runat="server" id="fUStats" href="stats.aspx">stats</a>
+            </div>
+            <div>
+                <h2>קורסים</h2>
+                <a href="course.aspx?cID=5" style="cursor: initial;"><span style="cursor: pointer;">מתמטיקה</span></a>
+                <a runat="server" id="a4" href="course.aspx?cID=6">פילוסופיה</a>
+                <a runat="server" id="A5" href="course.aspx?cID=7">גרפיקה</a>
+                <a runat="server" id="A6" href="course.aspx?cID=8">כלכלה</a>
+            </div>
+            <div></div>
+            <div style="display: flex; justify-content: center; width: 40%;">
+                <img src="../assets/logo-white.svg" alt="" class="logo" style="max-width: 50%;">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿
+.signin-button {
+    background: rgb(62, 112, 249);
+    background: linear-gradient(225deg, rgba(62, 112, 249, 1) 0%, rgba(134, 74, 255, 1) 100%);
+    color: var(--white);
+    padding: 11px 25px !important;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 700;
+    max-width: 50%;
+    -webkit-box-shadow: 0px 5px 10px -1px rgba(115, 72, 237, 0.22);
+    box-shadow: 0px 5px 10px -1px rgba(115, 72, 237, 0.22);
+}
+
+.signup-button {
+    background: var(--white);
+    color: var(--accent) !important;
+    padding: 11px 25px !important;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 700;
+    max-width: 50%;
+    border: 1px solid var(--accent);
+    -webkit-box-shadow: 0px 5px 10px -1px rgba(115, 72, 237, 0.22);
+    box-shadow: 0px 5px 10px -1px rgba(115, 72, 237, 0.22);
+}
+
+    .signin-button:hover,
+    .signup-button:hover {
+        transform: scale(1.08);
+    }
+
+a {
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+.form {
+    background: var(--bg-gr);
+   display: block;
+   margin: 0 auto;
+   width: 600px;
+    background-color: var(--white);
+    color: var(--white);
+    padding: 50px 90px;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 15px;
+    text-align: right;
+}
+
+label {
+    text-align: right;
+}
+
+input,
+textarea {
+    padding: 12px 20px;
+    margin: 8px 15px;
+    box-sizing: border-box;
+    direction: ltr;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    font-weight: 600;
+    font-family: Poppins, Assistant;
+    resize: none;
+}
+
+    input:focus {
+        border: none;
+        box-decoration-break: none;
+    }
+
+select {
+    padding: 12px 20px;
+    margin: 8px 15px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    font-weight: 600;
+}
+
+.submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background: rgb(62, 112, 249);
+    background: var(--accent);
+    color: var(--second);
+    padding: 11px 55px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    -webkit-box-shadow: 0px 5px 20px -1px rgba(115, 72, 237, 0.22);
+    box-shadow: 0px 5px 20px -1px rgba(115, 72, 237, 0.22);
+    cursor: pointer;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+    .submit:hover {
+        transform: scale(1.08);
+    }
+.edit-profile {
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+    margin: auto auto;
+}

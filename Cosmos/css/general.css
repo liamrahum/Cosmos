@@ -1,0 +1,541 @@
+﻿html {
+    scroll-behavior: smooth;
+    zoom: 90%;
+}
+
+:root {
+    --main: #151821;
+    --second: #FCFBFF;
+    --accent: #668BFC;
+    --extra: #6D66FE;
+    --time: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+body {
+    background-color: var(--second);
+    color: var(--main);
+    font-family: Poppins, Assistant, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+}
+
+.pfp {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 100px;
+    border-radius: 100px;
+}
+
+.topnav {
+    position: absolute;
+    top: 0;
+    margin: 20px 6%;
+    overflow: hidden;
+    color: var(--main);
+    display: flex;
+    text-decoration: none;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+    .topnav img {
+        float: right;
+    }
+
+    .topnav a {
+        width: 100px;
+        display: inline-block;
+        color: var(--main);
+        text-align: center;
+        align-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+        transition: var(--time);
+        line-height: 40px;
+    }
+
+        .topnav a:hover {
+            color: var(--accent);
+            transform: scale(1.07);
+        }
+
+        .topnav a:active {
+            color: var(--accent);
+        }
+
+.footer {
+    display: flex;
+    color: var(--second);
+    background-color: var(--main);
+    padding: 20px 10% 50px 10%;
+}
+
+    .footer div {
+        width: 20%;
+    }
+
+        .footer div a {
+            display: block;
+            text-decoration: none;
+            color: var(--second);
+            font-size: 17px;
+        }
+
+    .footer a:hover {
+        color: var(--accent);
+    }
+
+.header {
+    display: flex;
+    padding-right: 15%;
+    padding-left: 10%;
+    margin-bottom: 200px;
+}
+
+.header-white {
+    width: 65%;
+}
+
+.header-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -100;
+    width: 580px;
+    height: 540px;
+    background-color: var(--main);
+}
+
+    .header-black img {
+        position: absolute;
+        left: 70%;
+        top: 40px;
+        transform: translate3d(-50%,-50%);
+        height: 500px;
+        z-index: 10;
+    }
+
+.header-white h1 {
+    font-size: 60px;
+    line-height: 40px;
+    font-weight: 800;
+}
+
+.header-white p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.short-about {
+    display: flex;
+    margin: 0 auto;
+    height: 350px;
+}
+
+    .short-about div {
+        width: 50%;
+    }
+
+        .short-about div img {
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+            transition: var(--time);
+        }
+
+            .short-about div img:hover {
+                transform: scale(1.04);
+            }
+
+.h2-title {
+    font-size: 50px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.short-about .about-text p {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 500;
+    max-width: 50%;
+}
+
+.logout-button {
+    cursor: pointer;
+    background: var(--second);
+    color: var(--accent) !important;
+    padding: 5px 25px !important;
+    border-radius: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 700;
+    max-width: 50%;
+    border: 1px solid var(--accent);
+    -webkit-box-shadow: 0px 5px 10px -1px rgba(115, 72, 237, 0.22);
+    box-shadow: 0px 5px 10px -1px rgba(115, 72, 237, 0.22);
+}
+/*Stands for General Button*/
+.gbutton {
+    background: var(--main);
+    color: var(--second);
+    font-size: 20px;
+    padding: 7px 60px !important;
+    border-radius: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 700;
+    max-width: 50%;
+    border: 3px solid;
+    border-color: var(--extra);
+    transition: var(--time);
+    border-image-slice: 1;
+}
+
+    .gbutton:hover {
+        border-radius: 15px;
+        transform: scale3d(1.1);
+    }
+
+.homepage-courses {
+}
+
+.h3-title {
+    text-align: center;
+    color: var(--accent);
+}
+
+.separator {
+    margin-top: -10px;
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: var(--accent);
+}
+
+.courses-categories {
+    display: flex;
+    justify-content: center;
+}
+/*Stands for Course Button*/
+.cbutton {
+    cursor: pointer;
+    background: #F8F8F8;
+    color: var(--extra);
+    font-size: 20px;
+    padding: 13px 55px !important;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 700;
+    max-width: 50%;
+    transition: var(--time);
+    border: none;
+}
+
+.active-cbutton {
+    -webkit-box-shadow: 0px 5px 20px 0px rgba(102,139,252,0.2);
+    box-shadow: 0px 5px 20px 0px rgba(102,139,252,0.2);
+}
+
+.course-tab {
+    display: block;
+    margin: 0 auto;
+}
+
+.course {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.course-image-bg {
+    background-color: var(--extra);
+    border-radius: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.course div h1 {
+    font-size: 30px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.course div p {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 500;
+    max-width: 70%;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.course div img, .course div object {
+    border-radius: 15px;
+    aspect-ratio: 1;
+    width: 300px;
+    object-fit: cover;
+}
+
+.lessons {
+    display: block;
+}
+
+.lesson {
+    display: flex;
+}
+
+    .lesson h2 {
+        font-size: 17px;
+        width: 50%;
+        margin-right: 20px;
+    }
+
+    .lesson h3 {
+        font-size: 17px;
+        font-family: Assistant, Poppins;
+    }
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+    margin: auto auto;
+    margin-top: -55px;
+    margin-bottom: 20px;
+}
+
+.navigate {
+    cursor: pointer;
+    background: var(--second);
+    color: var(--extra);
+    font-size: 16px;
+    padding: 11px 40px !important;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: 700;
+    max-width: 50%;
+    transition: var(--time);
+    border: none;
+}
+/*Lesson separator*/
+.lSeparator {
+    width: 70%;
+    height: 2px;
+    background-color: #DFDFDF;
+}
+
+.custom-spacing {
+    width: 0;
+    height: 50px;
+}
+/*Lesson video page*/
+.lesson-title {
+    text-align: center;
+}
+.lesson-description{
+    width: 550px;
+    display: block;
+    margin: 0 auto;
+    direction: ltr;
+}
+.lesson-video {
+    display: block;
+    margin: 20px auto;
+}
+/*Profile page*/
+.user-data {
+    display: flex;
+}
+
+.side-data {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+    .side-data img {
+        border-radius: 20px;
+        border: 2px solid var(--accent);
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .side-data h2 {
+        text-align: center;
+        font-size: 21px;
+    }
+
+    .side-data h3 {
+        margin-right: 25px;
+    }
+
+    .side-data p {
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 50px;
+    }
+
+.my-progress {
+    display: inline-block;
+    width: 60%;
+    text-align: center;
+}
+
+.progress-bar {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 35px;
+    border-radius: 15px;
+    border: 1px solid var(--extra);
+    border-collapse: collapse;
+}
+
+    .progress-bar div {
+        background-color: var(--main);
+        border-radius: 15px;
+        border: 1px solid var(--extra);
+        border-collapse: collapse;
+        height: 100%;
+    }
+
+.completed-bar {
+    border: none !important;
+}
+
+    .completed-bar div {
+        background: #12c2e9 !important;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9) !important;
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9) !important;
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+/*Chat page*/
+.chat-wrapper {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.chat-system {
+    width: 50%;
+    height: 600px;
+    max-height: 800px;
+    border: 2px solid var(--accent);
+    border-radius: 15px;
+    margin-left: 30px;
+    direction: ltr;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.msgText {
+    position: sticky;
+    bottom: 0;
+    right: 50%;
+    width: 65%;
+    height: 40px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    direction: rtl;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Assistant, Poppins;
+    padding: 0 5%;
+}
+
+.chat-system input:focus {
+    outline: none;
+}
+
+.sendMsg {
+    cursor: pointer;
+    position: sticky;
+    bottom: 2.5px;
+    left: 0;
+    width: 20%;
+    height: 40px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    direction: rtl;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Assistant, Poppins;
+    padding: 0 5%;
+    text-align: center;
+    background-color: var(--accent);
+    color: var(--second);
+}
+
+.message {
+    display: flex;
+    margin: 20px 35px;
+    position: relative;
+}
+
+    .message p {
+        background-color: var(--accent);
+        color: var(--second);
+        max-width: 60%;
+        border-radius: 10px 10px 10px 0;
+        margin: 0 15px;
+        padding: 10px 20px;
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 17px;
+        direction: rtl;
+        margin-left: 60px;
+    }
+
+    .message img, .message object {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+.user-message {
+    display: flex;
+    margin: 20px 35px;
+    position: relative;
+    direction: rtl;
+}
+
+    .user-message p {
+        background-color: var(--second);
+        color: var(--accent);
+        max-width: 60%;
+        border-radius: 10px 10px 0 10px;
+        margin: 0 15px;
+        border: 1px solid var(--accent);
+        padding: 10px 20px;
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 17px;
+        direction: rtl;
+        margin-right: 60px;
+    }
+
+    .user-message img, .user-message object {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+    }

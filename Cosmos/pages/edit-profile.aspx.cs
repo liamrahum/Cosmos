@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+namespace Cosmos.pages
+{
+    public partial class edit_profile : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if ((bool)Session["Login"] == false)
+            {
+                Response.Redirect("login.aspx");
+            }
+            else if(Request.QueryString["uID"] == null)
+            {
+                Response.Redirect("edit-profile.aspx?uID=" + Session["userID"]);
+            }
+            else if(Request.QueryString["uID"] != Session["userID"].ToString() && Session["Admin"].ToString() == "False")
+            {
+                Response.Redirect("edit-profile.aspx?uID=" + Session["userID"]);
+            }
+
+             string SQLStr = "SELECT * FROM users " + $"WHERE userID = '{Request.QueryString["uID"]}' ";
+            DataSet ds = Helper.RetrieveTable(SQLStr, "users");
+            DataRow dr = ds.Tables["users"].Rows[0];
+            string data = Helper.EditUserProfile(dr);
+            userData.InnerHtml = data;
+        }
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            Helper.UpdateUser(Convert.ToInt32(Request.QueryString["uID"]), Request.Form["firstName"], Request.Form["lastName"], Request.Form["aboutMe"]);
+            Response.Redirect("my-profile.aspx?uID=" + Request.QueryString["uID"]);
+        }
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            Helper.Delete(Convert.ToInt32(Request.QueryString["uID"]));
+            Response.Redirect("users-table.aspx");
+        }
+    }
+}
